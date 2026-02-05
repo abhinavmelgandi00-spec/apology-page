@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>I'm So Sorry, My Love! 💖</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+            font-family: 'Comic Neue', cursive, sans-serif;
+
+        }
+
+        
+
+        body {
+
+            background: linear-gradient(135deg, #ffb6c1, #ffe4e1);
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 20px;
+
+            overflow-x: hidden;
+
+        }
+
+        
+
+        .container {
+
+            max-width: 800px;
+
+            width: 100%;
+
+            background-color: rgba(255, 255, 255, 0.95);
+
+            border-radius: 25px;
+
+            box-shadow: 0 15px 35px rgba(255, 105, 180, 0.3);
+
+            padding: 30px;
+
+            text-align: center;
+
+            position: relative;
+
+            border: 8px solid #ff9ebb;
+
+        }
+
+        
+
+        h1 {
+
+            color: #ff69b4;
+
+            font-size: 2.8rem;
+
+            margin-bottom: 15px;
+
+            text-shadow: 2px 2px 0 #ffe4e1;
+
+        }
+
+        
+
+        h2 {
+
+            color: #ff4081;
+
+            margin-bottom: 20px;
+
+            font-size: 1.8rem;
+
+        }
+
+        
+
+        .message {
+
+            font-size: 1.4rem;
+
+            line-height: 1.6;
+
+            color: #555;
+
+            margin-bottom: 30px;
+
+            padding: 0 15px;
+
+        }
+
+        
+
+        .highlight {
+
+            color: #ff4081;
+
+            font-weight: bold;
+
+        }
+
+        
+
+        .gif-container {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            margin: 25px 0;
+
+        }
+
+        
+
+        .gif {
+
+            width: 180px;
+
+            height: 180px;
+
+            border-radius: 15px;
+
+            object-fit: cover;
+
+            border: 5px solid #ffb6c1;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+        }
+
+        
+
+        .buttons-container {
+
+            margin: 30px 0;
+
+            position: relative;
+
+            min-height: 200px;
+
+            width: 100%;
+
+        }
+
+        
+
+        .button {
+
+            padding: 18px 40px;
+
+            font-size: 1.6rem;
+
+            border: none;
+
+            border-radius: 50px;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+            font-weight: bold;
+
+            margin: 15px;
+
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+        }
+
+        
+
+        .yes-button {
+
+            background-color: #4CAF50;
+
+            color: white;
+
+            border: 5px solid #45a049;
+
+        }
+
+        
+
+        .yes-button:hover {
+
+            background-color: #45a049;
+
+            transform: scale(1.1);
+
+        }
+
+        
+
+        .no-button {
+
+            background-color: #ff5252;
+
+            color: white;
+
+            border: 5px solid #ff4444;
+
+            position: absolute;
+
+            transition: all 0.3s ease;
+
+        }
+
+        
+
+        .no-button:hover {
+
+            background-color: #ff4444;
+
+        }
+
+        
+
+        .heart {
+
+            color: #ff4081;
+
+            font-size: 2rem;
+
+            animation: heartbeat 1.5s infinite;
+
+            margin: 0 5px;
+
+        }
+
+        
+
+        @keyframes heartbeat {
+
+            0% { transform: scale(1); }
+
+            5% { transform: scale(1.1); }
+
+            10% { transform: scale(1); }
+
+            15% { transform: scale(1.1); }
+
+            20% { transform: scale(1); }
+
+            100% { transform: scale(1); }
+
+        }
+
+        
+
+        .footer {
+
+            margin-top: 20px;
+
+            color: #777;
+
+            font-size: 1.1rem;
+
+        }
+
+        
+
+        .hearts-container {
+
+            position: absolute;
+
+            width: 100%;
+
+            height: 100%;
+
+            top: 0;
+
+            left: 0;
+
+            pointer-events: none;
+
+            z-index: -1;
+
+        }
+
+        
+
+        .heart-float {
+
+            position: absolute;
+
+            font-size: 1.5rem;
+
+            color: #ffb6c1;
+
+            opacity: 0.7;
+
+            animation: floatUp 5s linear infinite;
+
+        }
+
+        
+
+        @keyframes floatUp {
+
+            0% {
+
+                transform: translateY(100vh) rotate(0deg);
+
+                opacity: 0;
+
+            }
+
+            10% {
+
+                opacity: 0.7;
+
+            }
+
+            90% {
+
+                opacity: 0.7;
+
+            }
+
+            100% {
+
+                transform: translateY(-100px) rotate(360deg);
+
+                opacity: 0;
+
+            }
+
+        }
+
+        
+
+        .apology-counter {
+
+            background-color: #fff0f5;
+
+            border-radius: 15px;
+
+            padding: 10px;
+
+            margin-top: 20px;
+
+            display: inline-block;
+
+            border: 3px dashed #ff69b4;
+
+        }
+
+        
+
+        .counter-number {
+
+            font-size: 2rem;
+
+            font-weight: bold;
+
+            color: #ff4081;
+
+        }
+
+        
+
+        .super-move {
+
+            animation: superJump 0.5s ease;
+
+        }
+
+        
+
+        @keyframes superJump {
+
+            0% { transform: scale(1); }
+
+            50% { transform: scale(0.8) rotate(-10deg); }
+
+            100% { transform: scale(1); }
+
+        }
+
+        
+
+        /* Responsive design */
+
+        @media (max-width: 768px) {
+
+            h1 {
+
+                font-size: 2.2rem;
+
+            }
+
+            
+
+            .message {
+
+                font-size: 1.2rem;
+
+            }
+
+            
+
+            .gif {
+
+                width: 150px;
+
+                height: 150px;
+
+            }
+
+            
+
+            .button {
+
+                padding: 15px 30px;
+
+                font-size: 1.4rem;
+
+            }
+
+            
+
+            .buttons-container {
+
+                min-height: 180px;
+
+            }
+
+        }
+
+        
+
+        @media (max-width: 480px) {
+
+            .container {
+
+                padding: 20px 15px;
+
+            }
+
+            
+
+            h1 {
+
+                font-size: 1.8rem;
+
+            }
+
+            
+
+            .gif-container {
+
+                gap: 10px;
+
+            }
+
+            
+
+            .gif {
+
+                width: 130px;
+
+                height: 130px;
+
+            }
+
+            
+
+            .buttons-container {
+
+                min-height: 160px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    
+
+    <div class="container">
+
+        <h1><i class="fas fa-heart heart"></i> I'm So Sorry, Moumi! <i class="fas fa-heart heart"></i></h1>
+
+        <h2>Please forgive me for being silly...</h2>
+
+        
+
+        <div class="message">
+
+            I know merese bohot badi galti hui hai but that wasn't my intention at all but tera mood kharab hona was shababik and I feel terrible about it. You mean <span class="highlight">everything</span> to me, and I hate seeing you upset. I promise I'll be more thoughtful and caring from now on. <span class="highlight">Please give me another chance!</span>
+
+        </div>
+
+        
+
+        <div class="gif-container">
+
+            <img src="https://media.giphy.com/media/l4KhNR8j1LrNv3HwI/giphy.gif" alt="Cute puppy saying sorry" class="gif" onerror="this.src='https://media.giphy.com/media/26tknCqiJrBQG6DrC/giphy.gif'">
+
+            <img src="https://media.giphy.com/media/26tknCqiJrBQG6DrC/giphy.gif" alt="Cats apologizing" class="gif" onerror="this.src='https://media.giphy.com/media/l4KhNR8j1LrNv3HwI/giphy.gif'">
+
+            <img src="https://media.giphy.com/media/xT5LMVQdKpWv5CMZz2/giphy.gif" alt="Bear with sorry sign" class="gif" onerror="this.src='https://media.giphy.com/media/3o7abAHdYvZdBNnGZq/giphy.gif'">
+
+            <img src="https://media.giphy.com/media/3o7abAHdYvZdBNnGZq/giphy.gif" alt="Puppy eyes saying sorry" class="gif" onerror="this.src='https://media.giphy.com/media/xT5LMVQdKpWv5CMZz2/giphy.gif'">
+
+        </div>
+
+        
+
+        <div class="message">
+
+            consider this a form of me asking you for forgiveness and to show how much i care for you. Will you please forgive me?
+
+        </div>
+
+        
+
+        <div class="buttons-container">
+
+            <button class="button yes-button" id="yesButton">
+
+                <i class="fas fa-heart"></i> YES, I forgive you! <i class="fas fa-heart"></i>
+
+            </button>
+
+            <button class="button no-button" id="noButton">
+
+                <i class="fas fa-times-circle"></i> No, I'm still mad!
+
+            </button>
+
+        </div>
+
+        
+
+        <div class="apology-counter">
+
+            <p>Times you tried to say No: <span class="counter-number" id="apologyCount">0</span></p>
+
+        </div>
+
+        
+
+        <div class="footer">
+
+            Made with <i class="fas fa-heart" style="color:#ff4081;"></i> for the most amazing girlfriend in the world and i'll be there for you always but this time i didn't mean to do that, moumi agar meri galti maaf ho sakti hai toh please maaf kar dena....
+
+        </div>
+
+    </div>
+
+    <script>
+
+        // Create floating hearts
+
+        const heartsContainer = document.getElementById('heartsContainer');
+
+        const heartIcons = ['❤️', '💖', '💕', '💗', '💓', '💞', '💝'];
+
+        
+
+        for (let i = 0; i < 25; i++) {
+
+            const heart = document.createElement('div');
+
+            heart.classList.add('heart-float');
+
+            heart.innerHTML = heartIcons[Math.floor(Math.random() * heartIcons.length)];
+
+            heart.style.left = `${Math.random() * 100}%`;
+
+            heart.style.fontSize = `${Math.random() * 20 + 15}px`;
+
+            heart.style.animationDuration = `${Math.random() * 5 + 5}s`;
+
+            heart.style.animationDelay = `${Math.random() * 5}s`;
+
+            heartsContainer.appendChild(heart);
+
+        }
+
+        
+
+        // Get buttons
+
+        const yesButton = document.getElementById('yesButton');
+
+        const noButton = document.getElementById('noButton');
+
+        const apologyCount = document.getElementById('apologyCount');
+
+        
+
+        // Counter for apologies
+
+        let count = 0;
+
+        const savedCount = localStorage.getItem('apologyCount');
+
+        if (savedCount) {
+
+            count = parseInt(savedCount);
+
+        }
+
+        apologyCount.textContent = count;
+
+        
+
+        // Function to move the "No" button SUPER FAR
+
+        function moveNoButton() {
+
+            const container = document.querySelector('.buttons-container');
+
+            const containerRect = container.getBoundingClientRect();
+
+            
+
+            // Calculate max positions to keep button within container
+
+            const maxX = containerRect.width - noButton.offsetWidth - 30;
+
+            const maxY = containerRect.height - noButton.offsetHeight - 30;
+
+            
+
+            // Generate random position - this time FAR from current position
+
+            let randomX, randomY;
+
+            
+
+            // Get current position
+
+            const currentLeft = parseInt(noButton.style.left) || 0;
+
+            const currentTop = parseInt(noButton.style.top) || 0;
+
+            
+
+            // Ensure it moves to the opposite side (SUPER FAR movement)
+
+            if (currentLeft < maxX/2) {
+
+                // If currently on left, move to far right
+
+                randomX = Math.floor(Math.random() * (maxX/2) + (maxX/1.5));
+
+            } else {
+
+                // If currently on right, move to far left
+
+                randomX = Math.floor(Math.random() * (maxX/3));
+
+            }
+
+            
+
+            if (currentTop < maxY/2) {
+
+                // If currently on top, move to far bottom
+
+                randomY = Math.floor(Math.random() * (maxY/2) + (maxY/1.5));
+
+            } else {
+
+                // If currently on bottom, move to far top
+
+                randomY = Math.floor(Math.random() * (maxY/3));
+
+            }
+
+            
+
+            // Apply new position
+
+            noButton.style.left = `${randomX}px`;
+
+            noButton.style.top = `${randomY}px`;
+
+            
+
+            // Add super jump animation
+
+            noButton.classList.add('super-move');
+
+            setTimeout(() => {
+
+                noButton.classList.remove('super-move');
+
+            }, 500);
+
+            
+
+            // Increase apology counter
+
+            count++;
+
+            apologyCount.textContent = count;
+
+            localStorage.setItem('apologyCount', count);
+
+        }
+
+        
+
+        // Move "No" button on hover (for desktop) or touch (for mobile)
+
+        noButton.addEventListener('mouseover', moveNoButton);
+
+        noButton.addEventListener('touchstart', function(e) {
+
+            e.preventDefault();
+
+            moveNoButton();
+
+        });
+
+        
+
+        // Also move it on click attempt - MOVES EVEN FARTHER ON CLICK!
+
+        noButton.addEventListener('click', function(e) {
+
+            e.preventDefault();
+
+            
+
+            // Super extreme movement for clicks
+
+            const container = document.querySelector('.buttons-container');
+
+            const containerRect = container.getBoundingClientRect();
+
+            const maxX = containerRect.width - noButton.offsetWidth - 30;
+
+            const maxY = containerRect.height - noButton.offsetHeight - 30;
+
+            
+
+            // Make it jump to the complete opposite corner
+
+            const currentLeft = parseInt(noButton.style.left) || 0;
+
+            const currentTop = parseInt(noButton.style.top) || 0;
+
+            
+
+            // Determine opposite corner
+
+            let randomX, randomY;
+
+            
+
+            if (currentLeft < maxX/2) {
+
+                randomX = Math.floor(Math.random() * (maxX/4) + (maxX * 0.75));
+
+            } else {
+
+                randomX = Math.floor(Math.random() * (maxX/4));
+
+            }
+
+            
+
+            if (currentTop < maxY/2) {
+
+                randomY = Math.floor(Math.random() * (maxY/4) + (maxY * 0.75));
+
+            } else {
+
+                randomY = Math.floor(Math.random() * (maxY/4));
+
+            }
+
+            
+
+            // Apply extreme position
+
+            noButton.style.left = `${randomX}px`;
+
+            noButton.style.top = `${randomY}px`;
+
+            
+
+            // Add super jump animation
+
+            noButton.classList.add('super-move');
+
+            setTimeout(() => {
+
+                noButton.classList.remove('super-move');
+
+            }, 500);
+
+            
+
+            // Increase counter
+
+            count++;
+
+            apologyCount.textContent = count;
+
+            localStorage.setItem('apologyCount', count);
+
+            
+
+            // Play a funny sound
+
+            try {
+
+                const audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-cartoon-toy-whistle-400.mp3');
+
+                audio.volume = 0.3;
+
+                audio.play();
+
+            } catch (error) {
+
+                console.log("Audio not available");
+
+            }
+
+            
+
+            // Show a funny message after many attempts
+
+            if (count >= 5) {
+
+                document.querySelector('.message').innerHTML = `You've tried to click "No" ${count} times! The button is running away from you! 😂 <span class="highlight">Just click YES already!</span>`;
+
+            }
+
+            if (count >= 10) {
+
+                document.querySelector('.message').innerHTML = `Wow! ${count} attempts to say no? That's determination! <span class="highlight">But you know you want to forgive me! 😉</span>`;
+
+            }
+
+            if (count >= 15) {
+
+                document.querySelector('.message').innerHTML = `OKAY OKAY! You win! The button surrenders! <span class="highlight">Now please click YES! 💖</span>`;
+
+                // Make button smaller to show it's "surrendering"
+
+                noButton.style.transform = 'scale(0.7)';
+
+                noButton.innerHTML = '<i class="fas fa-flag"></i> I surrender!';
+
+            }
+
+        });
+
+        
+
+        // Handle "Yes" button click
+
+        yesButton.addEventListener('click', function() {
+
+            // Change the content to show thank you message
+
+            document.querySelector('h1').innerHTML = '<i class="fas fa-heart heart"></i> Thank You, My Love! <i class="fas fa-heart heart"></i>';
+
+            document.querySelector('h2').textContent = 'You just made me the happiest person!';
+
+            document.querySelector('.message').innerHTML = `After ${count} attempts to say no, you finally said YES! 🎉 <br>I promise I'll be the best boyfriend ever from now on! <span class="highlight">You're amazing and I love you so much!</span> ❤️`;
+
+            
+
+            // Change the gifs to happy ones
+
+            const gifs = document.querySelectorAll('.gif');
+
+            gifs[0].src = 'https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif';
+
+            gifs[1].src = 'https://media.giphy.com/media/3o7aD2sDyXlqJfzm2c/giphy.gif';
+
+            gifs[2].src = 'https://media.giphy.com/media/l0MYNB04rBb51QNtC/giphy.gif';
+
+            gifs[3].src = 'https://media.giphy.com/media/3o7TKsQ8gTp3WqXqjq/giphy.gif';
+
+            
+
+            // Hide the buttons
+
+            yesButton.style.display = 'none';
+
+            noButton.style.display = 'none';
+
+            
+
+            // Play celebration sound
+
+            try {
+
+                const audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-happy-crowd-laugh-464.mp3');
+
+                audio.volume = 0.4;
+
+                audio.play();
+
+            } catch (error) {
+
+                console.log("Audio not available");
+
+            }
+
+            
+
+            // Add celebration hearts
+
+            for (let i = 0; i < 50; i++) {
+
+                const heart = document.createElement('div');
+
+                heart.classList.add('heart-float');
+
+                heart.innerHTML = '❤️';
+
+                heart.style.left = `${Math.random() * 100}%`;
+
+                heart.style.fontSize = `${Math.random() * 25 + 20}px`;
+
+                heart.style.animationDuration = `${Math.random() * 3 + 2}s`;
+
+                heart.style.animationDelay = `${Math.random() * 2}s`;
+
+                heartsContainer.appendChild(heart);
+
+            }
+
+            
+
+            // Update local storage
+
+            localStorage.setItem('apologyCount', '0');
+
+        });
+
+        
+
+        // Initialize button position - start in a random spot
+
+        window.addEventListener('load', function() {
+
+            const container = document.querySelector('.buttons-container');
+
+            const containerRect = container.getBoundingClientRect();
+
+            const maxX = containerRect.width - noButton.offsetWidth - 30;
+
+            const maxY = containerRect.height - noButton.offsetHeight - 30;
+
+            
+
+            const randomX = Math.floor(Math.random() * maxX);
+
+            const randomY = Math.floor(Math.random() * maxY);
+
+            
+
+            noButton.style.left = `${randomX}px`;
+
+            noButton.style.top = `${randomY}px`;
+
+        });
+
+    </script>
+
+</body>
+
+</html>
